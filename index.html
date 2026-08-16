@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Programación II · C++</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- ============================= -->
+    <!-- PANTALLA 1: INICIO            -->
+    <!-- ============================= -->
+    <section id="screen-start" class="screen active">
+      <div class="card start-card">
+        <div class="ide-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <h1 class="title">QUIZ DE PROGRAMACIÓN II</h1>
+        <p class="subtitle">C++ · Segundo semestre</p>
+
+        <p class="description">
+          Pon a prueba cuánto realmente entiendes del código. No memorices: analiza.
+        </p>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">Preguntas</span>
+            <span class="meta-value">10</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Dificultad</span>
+            <span class="meta-value">Media</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Lenguaje</span>
+            <span class="meta-value">C++</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tiempo</span>
+            <span class="meta-value">Libre</span>
+          </div>
+        </div>
+
+        <button id="btn-start" class="btn btn-primary">COMENZAR QUIZ</button>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- PANTALLA 2: QUIZ               -->
+    <!-- ============================= -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-header">
+        <span id="question-counter" class="question-counter">Pregunta 1 de 10</span>
+        <div class="progress-bar-track">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <div class="card question-card">
+        <p id="question-tag" class="question-tag">PREGUNTA 1</p>
+        <h2 id="question-text" class="question-text"></h2>
+
+        <pre id="question-code" class="code-block" hidden><code></code></pre>
+
+        <div id="options-container" class="options-container"></div>
+
+        <div id="feedback-box" class="feedback-box" hidden>
+          <p id="feedback-title" class="feedback-title"></p>
+          <p id="feedback-explanation" class="feedback-explanation"></p>
+        </div>
+
+        <div class="action-row">
+          <button id="btn-check" class="btn btn-primary" disabled>COMPROBAR RESPUESTA</button>
+          <button id="btn-next" class="btn btn-primary" hidden>SIGUIENTE PREGUNTA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- PANTALLA 3: RESULTADOS         -->
+    <!-- ============================= -->
+    <section id="screen-results" class="screen">
+      <div class="card results-card">
+        <p class="results-eyebrow">QUIZ TERMINADO</p>
+        <h2 class="results-title">Tu resultado</h2>
+
+        <div class="score-circle">
+          <span id="score-fraction" class="score-fraction">0 / 10</span>
+          <span id="score-percent" class="score-percent">0%</span>
+        </div>
+
+        <p id="results-message" class="results-message"></p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value" id="stat-correct">0</span>
+            <span class="stat-label">Correctas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-incorrect">0</span>
+            <span class="stat-label">Incorrectas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="stat-grade">0.0</span>
+            <span class="stat-label">Nota / 5.0</span>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button id="btn-review" class="btn btn-secondary">REVISAR RESPUESTAS</button>
+          <button id="btn-restart" class="btn btn-primary">REPETIR QUIZ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- PANTALLA 4: REVISIÓN           -->
+    <!-- ============================= -->
+    <section id="screen-review" class="screen">
+      <div class="card review-card">
+        <h2 class="review-title">Revisión de respuestas</h2>
+        <div id="review-list" class="review-list"></div>
+        <div class="action-row">
+          <button id="btn-back-results" class="btn btn-secondary">VOLVER A RESULTADOS</button>
+          <button id="btn-restart-2" class="btn btn-primary">REPETIR QUIZ</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
